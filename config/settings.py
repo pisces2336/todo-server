@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "djoser",
     "apps.account",
+    "apps.mypage",
 ]
 
 SIMPLE_JWT = {
