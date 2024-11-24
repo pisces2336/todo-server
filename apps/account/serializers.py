@@ -21,8 +21,6 @@ class UserSerializer(serializers.ModelSerializer):
         if password:
             user.set_password(password)
 
-        print("hello")
-
         user.save()
         return user
 
