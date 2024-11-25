@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "djoser",
     "apps.account",
+    "apps.mypage",
 ]
 
 SIMPLE_JWT = {
@@ -138,3 +139,19 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = "account.User"
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "level": "DEBUG",
+            "class": "logging.StreamHandler",
+        },
+    },
+    "loggers": {
+        "django.db.backends": {
+            "handlers": ["console"],
+            "level": "DEBUG",
+        },
+    },
+}
